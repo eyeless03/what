@@ -52,7 +52,7 @@
                                 </Border.Effect>
                             </Border>
                             <Border x:Name="ButtonChrome"
-                                    Background="{TemplateBinding Background}"
+                                    Background="{StaticResource ButtonBaseBrush}"
                                     BorderBrush="{TemplateBinding BorderBrush}"
                                     BorderThickness="{TemplateBinding BorderThickness}"
                                     CornerRadius="16">
@@ -70,89 +70,23 @@
                         </Grid>
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
-                                <Trigger.EnterActions>
-                                    <BeginStoryboard>
-                                        <Storyboard>
-                                            <ColorAnimation Storyboard.TargetName="ButtonChrome"
-                                                            Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
-                                                            To="#36517D"
-                                                            Duration="0:0:0.16"/>
-                                            <DoubleAnimation Storyboard.TargetName="Glow"
-                                                             Storyboard.TargetProperty="Opacity"
-                                                             To="0.46"
-                                                             Duration="0:0:0.16"/>
-                                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX"
-                                                             To="1.045"
-                                                             Duration="0:0:0.16"/>
-                                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY"
-                                                             To="1.045"
-                                                             Duration="0:0:0.16"/>
-                                        </Storyboard>
-                                    </BeginStoryboard>
-                                </Trigger.EnterActions>
-                                <Trigger.ExitActions>
-                                    <BeginStoryboard>
-                                        <Storyboard>
-                                            <ColorAnimation Storyboard.TargetName="ButtonChrome"
-                                                            Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
-                                                            To="#24304A"
-                                                            Duration="0:0:0.18"/>
-                                            <DoubleAnimation Storyboard.TargetName="Glow"
-                                                             Storyboard.TargetProperty="Opacity"
-                                                             To="0.18"
-                                                             Duration="0:0:0.18"/>
-                                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX"
-                                                             To="1"
-                                                             Duration="0:0:0.18"/>
-                                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY"
-                                                             To="1"
-                                                             Duration="0:0:0.18"/>
-                                        </Storyboard>
-                                    </BeginStoryboard>
-                                </Trigger.ExitActions>
+                                <Setter TargetName="ButtonChrome" Property="Background" Value="{StaticResource ButtonHoverBrush}"/>
+                                <Setter TargetName="Glow" Property="Opacity" Value="0.46"/>
+                                <Setter Property="RenderTransform">
+                                    <Setter.Value>
+                                        <ScaleTransform ScaleX="1.045" ScaleY="1.045"/>
+                                    </Setter.Value>
+                                </Setter>
                             </Trigger>
                             <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="ButtonChrome" Property="Background" Value="{StaticResource ButtonPressedBrush}"/>
                                 <Setter TargetName="TopLight" Property="Opacity" Value="0.6"/>
-                                <Trigger.EnterActions>
-                                    <BeginStoryboard>
-                                        <Storyboard>
-                                            <ColorAnimation Storyboard.TargetName="ButtonChrome"
-                                                            Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
-                                                            To="#F59E0B"
-                                                            Duration="0:0:0.08"/>
-                                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX"
-                                                             To="0.96"
-                                                             Duration="0:0:0.08"/>
-                                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY"
-                                                            To="0.96"
-                                                             Duration="0:0:0.08"/>
-                                        </Storyboard>
-                                    </BeginStoryboard>
-                                </Trigger.EnterActions>
-                                <Trigger.ExitActions>
-                                    <BeginStoryboard>
-                                        <Storyboard>
-                                            <ColorAnimation Storyboard.TargetName="ButtonChrome"
-                                                            Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
-                                                            To="#36517D"
-                                                            Duration="0:0:0.12"/>
-                                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX"
-                                                             To="1.045"
-                                                             Duration="0:0:0.12"/>
-                                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY"
-                                                             To="1.045"
-                                                             Duration="0:0:0.12"/>
-                                        </Storyboard>
-                                    </BeginStoryboard>
-                                </Trigger.ExitActions>
+                                <Setter Property="RenderTransform">
+                                    <Setter.Value>
+                                        <ScaleTransform ScaleX="0.96" ScaleY="0.96"/>
+                                    </Setter.Value>
+                                </Setter>
                             </Trigger>
-                            <MultiTrigger>
-                                <MultiTrigger.Conditions>
-                                    <Condition Property="IsMouseOver" Value="False"/>
-                                    <Condition Property="IsPressed" Value="False"/>
-                                </MultiTrigger.Conditions>
-                                <Setter TargetName="TopLight" Property="Opacity" Value="0.28"/>
-                            </MultiTrigger>
                             <Trigger Property="IsEnabled" Value="False">
                                 <Setter Property="Foreground" Value="#8B95A7"/>
                                 <Setter Property="Cursor" Value="Arrow"/>
