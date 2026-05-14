@@ -1,0 +1,7 @@
+C:\Users\Пользователь\Desktop\ТПП\лаба 8\Lab8LocalizedNotepad\publish\Lab8LocalizedNotepad.exe
+C:\Users\Пользователь\Desktop\ТПП\лаба 8\Lab8LocalizedNotepad\publish\Lab8LocalizedNotepad.dll
+C:\Users\Пользователь\Desktop\ТПП\лаба 8\Lab8LocalizedNotepad\publish\Lab8LocalizedNotepad.deps.json
+C:\Users\Пользователь\Desktop\ТПП\лаба 8\Lab8LocalizedNotepad\publish\Lab8LocalizedNotepad.runtimeconfig.json
+C:\Users\Пользователь\Desktop\ТПП\лаба 8\Lab8LocalizedNotepad\publish\Lab8LocalizedNotepad.pdb
+C:\Users\Пользователь\Desktop\ТПП\лаба 8\Lab8LocalizedNotepad\publish\en\Lab8LocalizedNotepad.resources.dll
+C:\Users\Пользователь\Desktop\ТПП\лаба 8\Lab8LocalizedNotepad\publish\ru\Lab8LocalizedNotepad.resources.dll

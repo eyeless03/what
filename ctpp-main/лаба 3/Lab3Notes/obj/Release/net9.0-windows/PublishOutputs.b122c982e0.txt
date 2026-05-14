@@ -1,0 +1,5 @@
+C:\Users\Пользователь\Desktop\ТПП\лаба 3\Lab3Notes\publish\Lab3Notes.exe
+C:\Users\Пользователь\Desktop\ТПП\лаба 3\Lab3Notes\publish\Lab3Notes.dll
+C:\Users\Пользователь\Desktop\ТПП\лаба 3\Lab3Notes\publish\Lab3Notes.deps.json
+C:\Users\Пользователь\Desktop\ТПП\лаба 3\Lab3Notes\publish\Lab3Notes.runtimeconfig.json
+C:\Users\Пользователь\Desktop\ТПП\лаба 3\Lab3Notes\publish\Lab3Notes.pdb

@@ -1,0 +1,31 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "Lab8LocalizedNotepad/1.0.0": {
+        "runtime": {
+          "Lab8LocalizedNotepad.dll": {}
+        },
+        "resources": {
+          "en/Lab8LocalizedNotepad.resources.dll": {
+            "locale": "en"
+          },
+          "ru/Lab8LocalizedNotepad.resources.dll": {
+            "locale": "ru"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Lab8LocalizedNotepad/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

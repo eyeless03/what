@@ -1,0 +1,5 @@
+C:\Users\Пользователь\Desktop\ТПП\лаба 5\Lab5Notepad\publish\Lab5Notepad.exe
+C:\Users\Пользователь\Desktop\ТПП\лаба 5\Lab5Notepad\publish\Lab5Notepad.dll
+C:\Users\Пользователь\Desktop\ТПП\лаба 5\Lab5Notepad\publish\Lab5Notepad.deps.json
+C:\Users\Пользователь\Desktop\ТПП\лаба 5\Lab5Notepad\publish\Lab5Notepad.runtimeconfig.json
+C:\Users\Пользователь\Desktop\ТПП\лаба 5\Lab5Notepad\publish\Lab5Notepad.pdb

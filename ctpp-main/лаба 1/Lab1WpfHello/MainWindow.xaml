@@ -1,0 +1,88 @@
+<!-- Главное окно приложения. -->
+<Window x:Class="Lab1WpfHello.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Лабораторная работа 1"
+        Height="360"
+        Width="640"
+        MinHeight="320"
+        MinWidth="520"
+        WindowStartupLocation="CenterScreen"
+        Background="White">
+    <!-- Grid используется как базовая сетка для размещения элементов интерфейса. -->
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Основной заголовок окна с обязательной фразой из задания. -->
+        <TextBlock x:Name="GreetingTextBlock"
+                   Text="Hello, World!"
+                   FontSize="28"
+                   FontWeight="Bold"
+                   HorizontalAlignment="Center"
+                   Margin="0,10,0,20"/>
+
+        <!-- Краткое пояснение для пользователя. -->
+        <TextBlock Grid.Row="1"
+                   Text="Введите имя и нажмите кнопку."
+                   FontSize="14"
+                   HorizontalAlignment="Center"
+                   Margin="0,0,0,20"/>
+
+        <!-- Блок ввода имени. -->
+        <StackPanel Grid.Row="2"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center">
+            <TextBlock Text="Имя:"
+                       VerticalAlignment="Center"
+                       Margin="0,0,10,0"/>
+
+            <!-- Поле для ввода имени пользователя. -->
+            <TextBox x:Name="NameTextBox"
+                     Width="220"
+                     Height="28"
+                     VerticalContentAlignment="Center"
+                     MaxLength="20"
+                     ToolTip="Введите имя без цифр"
+                     TextChanged="NameTextBox_OnTextChanged"/>
+        </StackPanel>
+
+        <!-- Кнопки управления программой. -->
+        <StackPanel Grid.Row="3"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    Margin="0,20,0,10">
+            <!-- Кнопка запуска проверки и вывода приветствия. -->
+            <Button Width="100"
+                    Height="30"
+                    Margin="0,0,10,0"
+                    Click="ShowGreetingButton_OnClick">
+                Показать
+            </Button>
+
+            <!-- Кнопка возвращает интерфейс в начальное состояние. -->
+            <Button Width="100"
+                    Height="30"
+                    Click="ClearButton_OnClick">
+                Сброс
+            </Button>
+        </StackPanel>
+
+        <!-- Здесь выводятся подсказки и сообщения об ошибке. -->
+        <TextBlock x:Name="ValidationMessageTextBlock"
+                   Grid.Row="4"
+                   Margin="0,20,0,0"
+                   FontSize="14"
+                   TextWrapping="Wrap"
+                   TextAlignment="Center"
+                   VerticalAlignment="Top"/>
+    </Grid>
+</Window>

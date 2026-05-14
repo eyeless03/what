@@ -1,0 +1,5 @@
+C:\Users\Пользователь\Desktop\ТПП\лаба 2\Lab2Calculator\publish\Lab2Calculator.exe
+C:\Users\Пользователь\Desktop\ТПП\лаба 2\Lab2Calculator\publish\Lab2Calculator.dll
+C:\Users\Пользователь\Desktop\ТПП\лаба 2\Lab2Calculator\publish\Lab2Calculator.deps.json
+C:\Users\Пользователь\Desktop\ТПП\лаба 2\Lab2Calculator\publish\Lab2Calculator.runtimeconfig.json
+C:\Users\Пользователь\Desktop\ТПП\лаба 2\Lab2Calculator\publish\Lab2Calculator.pdb

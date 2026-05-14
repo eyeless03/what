@@ -1,0 +1,5 @@
+C:\Users\Пользователь\Desktop\ТПП\лаба 7\Lab7CustomButtons\publish\Lab7CustomButtons.exe
+C:\Users\Пользователь\Desktop\ТПП\лаба 7\Lab7CustomButtons\publish\Lab7CustomButtons.dll
+C:\Users\Пользователь\Desktop\ТПП\лаба 7\Lab7CustomButtons\publish\Lab7CustomButtons.deps.json
+C:\Users\Пользователь\Desktop\ТПП\лаба 7\Lab7CustomButtons\publish\Lab7CustomButtons.runtimeconfig.json
+C:\Users\Пользователь\Desktop\ТПП\лаба 7\Lab7CustomButtons\publish\Lab7CustomButtons.pdb

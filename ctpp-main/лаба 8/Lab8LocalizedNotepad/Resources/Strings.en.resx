@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="WindowTitle" xml:space="preserve"><value>Multilingual Notepad</value></data>
+  <data name="LabTitle" xml:space="preserve"><value>Laboratory work 8</value></data>
+  <data name="AppTitle" xml:space="preserve"><value>Multilingual Notepad</value></data>
+  <data name="FileMenu" xml:space="preserve"><value>File</value></data>
+  <data name="New" xml:space="preserve"><value>New</value></data>
+  <data name="Open" xml:space="preserve"><value>Open</value></data>
+  <data name="Save" xml:space="preserve"><value>Save</value></data>
+  <data name="Close" xml:space="preserve"><value>Close</value></data>
+  <data name="Language" xml:space="preserve"><value>Language</value></data>
+  <data name="StatusReady" xml:space="preserve"><value>The document is ready for editing.</value></data>
+  <data name="StatusNew" xml:space="preserve"><value>A new document has been created.</value></data>
+  <data name="StatusOpened" xml:space="preserve"><value>The file has been opened.</value></data>
+  <data name="StatusSaved" xml:space="preserve"><value>The file has been saved.</value></data>
+  <data name="Unsaved" xml:space="preserve"><value>There are unsaved changes</value></data>
+  <data name="Saved" xml:space="preserve"><value>All changes are saved</value></data>
+  <data name="FileNotSaved" xml:space="preserve"><value>The file has not been saved yet</value></data>
+  <data name="Stats" xml:space="preserve"><value>{0} lines | {1} words | {2} characters</value></data>
+  <data name="ConfirmSave" xml:space="preserve"><value>Save changes before continuing?</value></data>
+  <data name="UnsavedDocument" xml:space="preserve"><value>Unsaved document</value></data>
+  <data name="OpenError" xml:space="preserve"><value>Could not open file: {0}</value></data>
+  <data name="SaveError" xml:space="preserve"><value>Could not save file: {0}</value></data>
+  <data name="ErrorTitle" xml:space="preserve"><value>Error</value></data>
+</root>

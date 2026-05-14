@@ -1,0 +1,5 @@
+C:\Users\Пользователь\Desktop\ТПП\лаба 1\Lab1WpfHello\publish\Lab1WpfHello.exe
+C:\Users\Пользователь\Desktop\ТПП\лаба 1\Lab1WpfHello\publish\Lab1WpfHello.dll
+C:\Users\Пользователь\Desktop\ТПП\лаба 1\Lab1WpfHello\publish\Lab1WpfHello.deps.json
+C:\Users\Пользователь\Desktop\ТПП\лаба 1\Lab1WpfHello\publish\Lab1WpfHello.runtimeconfig.json
+C:\Users\Пользователь\Desktop\ТПП\лаба 1\Lab1WpfHello\publish\Lab1WpfHello.pdb

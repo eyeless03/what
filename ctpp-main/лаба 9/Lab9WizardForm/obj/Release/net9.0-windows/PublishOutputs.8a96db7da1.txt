@@ -1,0 +1,5 @@
+C:\Users\Пользователь\Desktop\ТПП\лаба 9\Lab9WizardForm\publish\Lab9WizardForm.exe
+C:\Users\Пользователь\Desktop\ТПП\лаба 9\Lab9WizardForm\publish\Lab9WizardForm.dll
+C:\Users\Пользователь\Desktop\ТПП\лаба 9\Lab9WizardForm\publish\Lab9WizardForm.deps.json
+C:\Users\Пользователь\Desktop\ТПП\лаба 9\Lab9WizardForm\publish\Lab9WizardForm.runtimeconfig.json
+C:\Users\Пользователь\Desktop\ТПП\лаба 9\Lab9WizardForm\publish\Lab9WizardForm.pdb

@@ -1,0 +1,256 @@
+<Window x:Class="Lab6AnimatedCalculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Анимированный калькулятор"
+        Height="660"
+        Width="500"
+        MinHeight="620"
+        MinWidth="460"
+        WindowStartupLocation="CenterScreen"
+        Background="#090E1A"
+        KeyDown="Window_OnKeyDown">
+    <Window.Resources>
+        <SolidColorBrush x:Key="NumberBrush" Color="#172033"/>
+        <SolidColorBrush x:Key="MemoryBrush" Color="#29344D"/>
+        <SolidColorBrush x:Key="OperationBrush" Color="#7C3AED"/>
+        <SolidColorBrush x:Key="EqualsBrush" Color="#2DD4BF"/>
+        <SolidColorBrush x:Key="DangerBrush" Color="#F43F5E"/>
+        <SolidColorBrush x:Key="TextBrush" Color="#F8FAFC"/>
+        <SolidColorBrush x:Key="MutedBrush" Color="#94A3B8"/>
+
+        <Storyboard x:Key="DisplayResultStoryboard">
+            <DoubleAnimation Storyboard.TargetName="DisplayPanel"
+                             Storyboard.TargetProperty="Opacity"
+                             From="0.28"
+                             To="1"
+                             Duration="0:0:0.32"/>
+            <DoubleAnimation Storyboard.TargetName="DisplayScale"
+                             Storyboard.TargetProperty="ScaleX"
+                             From="0.965"
+                             To="1"
+                             Duration="0:0:0.32"/>
+            <DoubleAnimation Storyboard.TargetName="DisplayScale"
+                             Storyboard.TargetProperty="ScaleY"
+                             From="0.965"
+                             To="1"
+                             Duration="0:0:0.32"/>
+        </Storyboard>
+
+        <Storyboard x:Key="DisplayClearStoryboard">
+            <DoubleAnimation Storyboard.TargetName="DisplayTextBlock"
+                             Storyboard.TargetProperty="Opacity"
+                             From="0"
+                             To="1"
+                             Duration="0:0:0.36"/>
+        </Storyboard>
+
+        <Style x:Key="CalculatorButtonStyle" TargetType="Button">
+            <Setter Property="Margin" Value="6"/>
+            <Setter Property="FontSize" Value="22"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Foreground" Value="{StaticResource TextBrush}"/>
+            <Setter Property="Background" Value="{StaticResource NumberBrush}"/>
+            <Setter Property="BorderBrush" Value="#2A3A59"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="RenderTransformOrigin" Value="0.5,0.5"/>
+            <Setter Property="RenderTransform">
+                <Setter.Value>
+                    <ScaleTransform ScaleX="1" ScaleY="1"/>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="ButtonBorder"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="16">
+                            <Border.Effect>
+                                <DropShadowEffect BlurRadius="16"
+                                                  ShadowDepth="0"
+                                                  Opacity="0.28"
+                                                  Color="#0EA5E9"/>
+                            </Border.Effect>
+                            <ContentPresenter HorizontalAlignment="Center"
+                                              VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Trigger.EnterActions>
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX"
+                                                             To="1.08"
+                                                             Duration="0:0:0.12"/>
+                                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY"
+                                                             To="1.08"
+                                                             Duration="0:0:0.12"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </Trigger.EnterActions>
+                                <Trigger.ExitActions>
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX"
+                                                             To="1"
+                                                             Duration="0:0:0.16"/>
+                                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY"
+                                                             To="1"
+                                                             Duration="0:0:0.16"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </Trigger.ExitActions>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Trigger.EnterActions>
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <ColorAnimation Storyboard.TargetName="ButtonBorder"
+                                                            Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                                            To="#FACC15"
+                                                            Duration="0:0:0.06"
+                                                            AutoReverse="True"/>
+                                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX"
+                                                             To="0.96"
+                                                             Duration="0:0:0.06"
+                                                             AutoReverse="True"/>
+                                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY"
+                                                             To="0.96"
+                                                             Duration="0:0:0.06"
+                                                             AutoReverse="True"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </Trigger.EnterActions>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="MemoryButtonStyle" BasedOn="{StaticResource CalculatorButtonStyle}" TargetType="Button">
+            <Setter Property="Background" Value="{StaticResource MemoryBrush}"/>
+        </Style>
+
+        <Style x:Key="OperationButtonStyle" BasedOn="{StaticResource CalculatorButtonStyle}" TargetType="Button">
+            <Setter Property="Background" Value="{StaticResource OperationBrush}"/>
+            <Setter Property="BorderBrush" Value="#A78BFA"/>
+        </Style>
+
+        <Style x:Key="EqualsButtonStyle" BasedOn="{StaticResource CalculatorButtonStyle}" TargetType="Button">
+            <Setter Property="Background" Value="{StaticResource EqualsBrush}"/>
+            <Setter Property="Foreground" Value="#082F2A"/>
+            <Setter Property="BorderBrush" Value="#99F6E4"/>
+        </Style>
+
+        <Style x:Key="DangerButtonStyle" BasedOn="{StaticResource CalculatorButtonStyle}" TargetType="Button">
+            <Setter Property="Background" Value="{StaticResource DangerBrush}"/>
+            <Setter Property="BorderBrush" Value="#FDA4AF"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid Margin="22">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Margin="2,0,2,18">
+            <TextBlock Text="Лабораторная работа 6"
+                       Foreground="{StaticResource MutedBrush}"
+                       FontSize="13"/>
+            <TextBlock Text="Анимированный калькулятор"
+                       Foreground="{StaticResource TextBrush}"
+                       FontSize="28"
+                       FontWeight="Bold"/>
+        </StackPanel>
+
+        <Border x:Name="DisplayPanel"
+                Grid.Row="1"
+                Padding="18"
+                Background="#101827"
+                BorderBrush="#22D3EE"
+                BorderThickness="1.5"
+                CornerRadius="22"
+                RenderTransformOrigin="0.5,0.5">
+            <Border.RenderTransform>
+                <ScaleTransform x:Name="DisplayScale" ScaleX="1" ScaleY="1"/>
+            </Border.RenderTransform>
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="28"
+                                  ShadowDepth="0"
+                                  Opacity="0.45"
+                                  Color="#22D3EE"/>
+            </Border.Effect>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <TextBlock x:Name="ExpressionTextBlock"
+                           Text="Готов к вычислениям"
+                           Foreground="{StaticResource MutedBrush}"
+                           FontSize="14"
+                           TextTrimming="CharacterEllipsis"/>
+                <TextBlock x:Name="DisplayTextBlock"
+                           Grid.Row="1"
+                           Text="0"
+                           Foreground="{StaticResource TextBrush}"
+                           FontSize="44"
+                           FontWeight="Bold"
+                           HorizontalAlignment="Right"
+                           TextTrimming="CharacterEllipsis"/>
+            </Grid>
+        </Border>
+
+        <UniformGrid Grid.Row="2"
+                     Rows="5"
+                     Columns="4"
+                     Margin="0,18,0,12">
+            <Button Content="C" Click="ClearButton_OnClick" Style="{StaticResource DangerButtonStyle}"/>
+            <Button Content="±" Click="ToggleSignButton_OnClick" Style="{StaticResource MemoryButtonStyle}"/>
+            <Button Content="⌫" Click="BackspaceButton_OnClick" Style="{StaticResource MemoryButtonStyle}"/>
+            <Button Content="/" Click="OperationButton_OnClick" Style="{StaticResource OperationButtonStyle}"/>
+
+            <Button Content="7" Click="DigitButton_OnClick" Style="{StaticResource CalculatorButtonStyle}"/>
+            <Button Content="8" Click="DigitButton_OnClick" Style="{StaticResource CalculatorButtonStyle}"/>
+            <Button Content="9" Click="DigitButton_OnClick" Style="{StaticResource CalculatorButtonStyle}"/>
+            <Button Content="*" Click="OperationButton_OnClick" Style="{StaticResource OperationButtonStyle}"/>
+
+            <Button Content="4" Click="DigitButton_OnClick" Style="{StaticResource CalculatorButtonStyle}"/>
+            <Button Content="5" Click="DigitButton_OnClick" Style="{StaticResource CalculatorButtonStyle}"/>
+            <Button Content="6" Click="DigitButton_OnClick" Style="{StaticResource CalculatorButtonStyle}"/>
+            <Button Content="-" Click="OperationButton_OnClick" Style="{StaticResource OperationButtonStyle}"/>
+
+            <Button Content="1" Click="DigitButton_OnClick" Style="{StaticResource CalculatorButtonStyle}"/>
+            <Button Content="2" Click="DigitButton_OnClick" Style="{StaticResource CalculatorButtonStyle}"/>
+            <Button Content="3" Click="DigitButton_OnClick" Style="{StaticResource CalculatorButtonStyle}"/>
+            <Button Content="+" Click="OperationButton_OnClick" Style="{StaticResource OperationButtonStyle}"/>
+
+            <Button Content="0" Click="DigitButton_OnClick" Style="{StaticResource CalculatorButtonStyle}"/>
+            <Button Content="." Click="DecimalButton_OnClick" Style="{StaticResource CalculatorButtonStyle}"/>
+            <Button Content="=" Click="EqualsButton_OnClick" Style="{StaticResource EqualsButtonStyle}"/>
+            <Button Content="↻" Click="ClearButton_OnClick" Style="{StaticResource MemoryButtonStyle}"/>
+        </UniformGrid>
+
+        <Border Grid.Row="3"
+                Padding="12,8"
+                Background="#101827"
+                BorderBrush="#263A5C"
+                BorderThickness="1"
+                CornerRadius="12">
+            <TextBlock x:Name="StatusTextBlock"
+                       Text="Анимации: наведение, нажатие, смена результата и очистка дисплея."
+                       Foreground="{StaticResource MutedBrush}"
+                       FontSize="13"
+                       TextWrapping="Wrap"/>
+        </Border>
+    </Grid>
+</Window>

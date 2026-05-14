@@ -1,0 +1,5 @@
+C:\Users\Пользователь\Desktop\ТПП\лаба 6\Lab6AnimatedCalculator\publish\Lab6AnimatedCalculator.exe
+C:\Users\Пользователь\Desktop\ТПП\лаба 6\Lab6AnimatedCalculator\publish\Lab6AnimatedCalculator.dll
+C:\Users\Пользователь\Desktop\ТПП\лаба 6\Lab6AnimatedCalculator\publish\Lab6AnimatedCalculator.deps.json
+C:\Users\Пользователь\Desktop\ТПП\лаба 6\Lab6AnimatedCalculator\publish\Lab6AnimatedCalculator.runtimeconfig.json
+C:\Users\Пользователь\Desktop\ТПП\лаба 6\Lab6AnimatedCalculator\publish\Lab6AnimatedCalculator.pdb

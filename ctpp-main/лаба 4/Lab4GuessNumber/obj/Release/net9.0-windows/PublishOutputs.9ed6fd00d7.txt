@@ -1,0 +1,5 @@
+C:\Users\Пользователь\Desktop\ТПП\лаба 4\Lab4GuessNumber\publish\Lab4GuessNumber.exe
+C:\Users\Пользователь\Desktop\ТПП\лаба 4\Lab4GuessNumber\publish\Lab4GuessNumber.dll
+C:\Users\Пользователь\Desktop\ТПП\лаба 4\Lab4GuessNumber\publish\Lab4GuessNumber.deps.json
+C:\Users\Пользователь\Desktop\ТПП\лаба 4\Lab4GuessNumber\publish\Lab4GuessNumber.runtimeconfig.json
+C:\Users\Пользователь\Desktop\ТПП\лаба 4\Lab4GuessNumber\publish\Lab4GuessNumber.pdb
