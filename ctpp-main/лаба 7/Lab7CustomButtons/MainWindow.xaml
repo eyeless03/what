@@ -17,7 +17,6 @@
         <SolidColorBrush x:Key="PanelBrush" Color="#182133"/>
         <SolidColorBrush x:Key="ButtonBaseBrush" Color="#24304A"/>
         <SolidColorBrush x:Key="ButtonHoverBrush" Color="#36517D"/>
-        <SolidColorBrush x:Key="ButtonPressedBrush" Color="#F59E0B"/>
         <SolidColorBrush x:Key="DisabledBrush" Color="#3B4252"/>
 
         <Style x:Key="NeonButtonStyle" TargetType="Button">
@@ -79,7 +78,6 @@
                                 </Setter>
                             </Trigger>
                             <Trigger Property="IsPressed" Value="True">
-                                <Setter TargetName="ButtonChrome" Property="Background" Value="{StaticResource ButtonPressedBrush}"/>
                                 <Setter TargetName="TopLight" Property="Opacity" Value="0.6"/>
                                 <Setter Property="RenderTransform">
                                     <Setter.Value>
