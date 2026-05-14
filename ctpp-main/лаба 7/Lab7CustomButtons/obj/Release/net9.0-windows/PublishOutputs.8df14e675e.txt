@@ -1,0 +1,5 @@
+/Users/timofejtulin/Desktop/ттп/ctpp-main/лаба 7/Lab7CustomButtons/publish/Lab7CustomButtons
+/Users/timofejtulin/Desktop/ттп/ctpp-main/лаба 7/Lab7CustomButtons/publish/Lab7CustomButtons.dll
+/Users/timofejtulin/Desktop/ттп/ctpp-main/лаба 7/Lab7CustomButtons/publish/Lab7CustomButtons.deps.json
+/Users/timofejtulin/Desktop/ттп/ctpp-main/лаба 7/Lab7CustomButtons/publish/Lab7CustomButtons.runtimeconfig.json
+/Users/timofejtulin/Desktop/ттп/ctpp-main/лаба 7/Lab7CustomButtons/publish/Lab7CustomButtons.pdb

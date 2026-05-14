@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Lab7CustomButtons")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+21b6d126de062bd1b327f668b399f87edb7c9534")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f3eff1a045ea9fb04f944720ef191839e60ec168")]
 [assembly: System.Reflection.AssemblyProductAttribute("Lab7CustomButtons")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Lab7CustomButtons")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Пользователь\\Desktop\\ТПП\\лаба 7\\Lab7CustomButtons\\Lab7CustomButtons.csproj": {}
+    "/Users/timofejtulin/Desktop/ттп/ctpp-main/лаба 7/Lab7CustomButtons/Lab7CustomButtons.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Пользователь\\Desktop\\ТПП\\лаба 7\\Lab7CustomButtons\\Lab7CustomButtons.csproj": {
+    "/Users/timofejtulin/Desktop/ттп/ctpp-main/лаба 7/Lab7CustomButtons/Lab7CustomButtons.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Пользователь\\Desktop\\ТПП\\лаба 7\\Lab7CustomButtons\\Lab7CustomButtons.csproj",
+        "projectUniqueName": "/Users/timofejtulin/Desktop/ттп/ctpp-main/лаба 7/Lab7CustomButtons/Lab7CustomButtons.csproj",
         "projectName": "Lab7CustomButtons",
-        "projectPath": "C:\\Users\\Пользователь\\Desktop\\ТПП\\лаба 7\\Lab7CustomButtons\\Lab7CustomButtons.csproj",
-        "packagesPath": "C:\\Users\\Пользователь\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Пользователь\\Desktop\\ТПП\\лаба 7\\Lab7CustomButtons\\obj\\",
+        "projectPath": "/Users/timofejtulin/Desktop/ттп/ctpp-main/лаба 7/Lab7CustomButtons/Lab7CustomButtons.csproj",
+        "packagesPath": "/Users/timofejtulin/.nuget/packages/",
+        "outputPath": "/Users/timofejtulin/Desktop/ттп/ctpp-main/лаба 7/Lab7CustomButtons/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Пользователь\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/timofejtulin/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0-windows"
@@ -54,6 +54,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[9.0.7, 9.0.7]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -62,7 +68,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
